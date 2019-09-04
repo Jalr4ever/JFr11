@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+    <!--<bean name ="" class="">-->
+        <!--<property name="" value=""></property>-->
+    <!--</bean>-->
+
+    <bean name = "A" class = "com.jf11.bean.A">
+        <property name="name" value="jalrever"></property>
+    </bean>
+
+    <bean name = "B" class="com.jf11.bean.B">
+        <property name = "a" ref = "A"></property>
+    </bean>
+</beans>

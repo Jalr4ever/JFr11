@@ -9,13 +9,19 @@ import java.util.List;
  * Created by jalr on 2019/8/30.
  */
 public class A {
-    private String name;
-
-    public String getName() {
+    public int getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(int name) {
         this.name = name;
     }
+
+    private int name;
+
+    public A() {
+        System.out.println("A created!");
+    }
+
+
 }

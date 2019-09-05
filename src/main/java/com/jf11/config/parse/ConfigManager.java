@@ -37,8 +37,13 @@ public class ConfigManager {
                 Bean bean = new Bean();
                 String name = elm.attributeValue("name");
                 String className = elm.attributeValue("class");
+                String scope = elm.attributeValue("scope");
+
                 bean.setName(name);
                 bean.setClassName(className);
+                if (scope != null) {
+                    bean.setScope(scope);
+                }
 
                 List<Element> child = elm.elements("property"); //bean 的 property
                 if (child != null) {

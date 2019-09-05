@@ -9,6 +9,10 @@ package com.jf11.bean;
 public class B {
     private A a;
 
+    public B() {
+        System.out.println("B created!");
+    }
+
     public A getA() {
         return a;
     }

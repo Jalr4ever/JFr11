@@ -2,14 +2,17 @@
 
 <beans>
     <!--<bean name ="" class="">-->
-        <!--<property name="" value=""></property>-->
+    <!--<property name="" value=""></property>-->
     <!--</bean>-->
 
-    <bean name = "A" class = "com.jf11.bean.A">
-        <property name="name" value="jalrever"></property>
+    <bean name="A" class="com.jf11.bean.A">
+        <property name="name" value="666"></property>
     </bean>
 
-    <bean name = "B" class="com.jf11.bean.B">
-        <property name = "a" ref = "A"></property>
+    <bean name="B" class="com.jf11.bean.B" scope="prototype">
+        <property name="a" ref="A"></property>
+    </bean>
+    <bean name="C" class="com.jf11.bean.C" scope="prototype">
+        <property name="b" ref="B"></property>
     </bean>
 </beans>

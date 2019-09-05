@@ -102,40 +102,6 @@ public class ClassPathXmlApplicationContext implements BeanFactory {
                     }
                 }
 
-
-
-
-
-
-                /*
-                String name = property.getName();
-                Method setMethod = BeanUtils.getWriteMethod(beanObj, name);
-                Object injectParam = null;
-                if (property.getValue() != null) { //获取要注入的值
-                    String value = property.getValue();
-                    injectParam = value;
-                }
-
-                if (property.getRef() != null) { //获取要注入的 bean
-                    Object existBean = context.get(property.getRef());
-                    if (existBean == null) { //容器不存在 bean
-                        existBean = createBean(config.get(property.getRef())); //创建 bean 的 property 指定的 bean
-                        if (config.get(property.getRef()).getScope().equals("singleton"))
-                        context.put(property.getRef(), existBean); //注入引入名称对应的 bean
-                    }
-                    injectParam = existBean;
-                }
-
-                try {
-                    if (setMethod != null) {
-                        setMethod.invoke(beanObj, injectParam); //注入
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    throw new RuntimeException("Bean property - " + name + " has no correct set method or wrong parameter.");
-                }
-            */
-
             }
         }
         return beanObj;
